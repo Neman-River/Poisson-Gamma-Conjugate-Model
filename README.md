@@ -16,7 +16,7 @@ The app walks through the full Bayesian workflow in four sections:
 **Prerequisites:** [uv](https://docs.astral.sh/uv/)
 
 ```bash
-git clone https://github.com/<your-username>/poisson-gamma-dist.git
+git clone https://github.com/Poisson-Gamma-Conjugate-Model.git
 cd poisson-gamma-dist
 uv run streamlit run app.py
 ```
