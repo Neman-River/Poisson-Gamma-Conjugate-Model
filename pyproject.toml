@@ -1,0 +1,11 @@
+[project]
+name = "poisson-gamma-dist"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.13"
+dependencies = [
+    "numpy>=2.4.4",
+    "plotly>=6.7.0",
+    "scipy>=1.17.1",
+    "streamlit>=1.57.0",
+]
