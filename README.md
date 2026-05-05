@@ -1,6 +1,8 @@
-# Poisson-Gamma Bayesian Inference
+# Poisson-Gamma Bayesian Inference Simulator
 
 An interactive Streamlit app for exploring Bayesian inference of a Poisson rate λ using the Gamma conjugate prior.
+
+https://gamma-conjugate-model.streamlit.app
 
 ## What it does
 
