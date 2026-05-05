@@ -35,7 +35,6 @@ Managed via `pyproject.toml` and `uv.lock`:
 ```
 .
 ├── app.py                    # Streamlit app
-├── main.py                   # Entry point
 ├── PoissonGammaPython.ipynb  # Concept notebook
 ├── pyproject.toml
 └── uv.lock
