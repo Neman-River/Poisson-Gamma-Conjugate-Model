@@ -1,6 +1,6 @@
 # Poisson-Gamma Bayesian Inference Simulator
 
-An interactive Streamlit app for exploring Bayesian inference of a Poisson rate λ using the Gamma conjugate prior.
+An interactive Streamlit app for exploring Bayesian inference of a Poisson rate λ using the Gamma conjugate prior, plus an A/B testing case study notebook.
 
 https://gamma-conjugate-model.streamlit.app
 
@@ -12,6 +12,18 @@ The app walks through the full Bayesian workflow in four sections:
 2. **Data** — simulate Poisson counts or enter your own
 3. **Bayesian Update** — conjugate update yields a new Gamma posterior
 4. **Posterior Predictive** — marginalising over λ gives a Negative Binomial distribution for future counts
+
+## A/B Testing case study
+
+`AB-testing-poissongamma.ipynb` applies the Poisson-Gamma model to a realistic A/B test:
+
+**Scenario**: E-commerce recommendation widget — does Variant B drive more product clicks per session?
+
+- **Metric**: click count per user session (Poisson-distributed)
+- **Prior**: Gamma(α, β) over the click rate λ
+- **Update**: closed-form conjugate posterior Gamma(α + ΣY, β + N)
+- **Decision metric**: P(λ_B > λ_A) estimated via Monte Carlo
+- **Posterior predictive**: Negative Binomial PMF for each variant
 
 ## Run locally
 
@@ -31,13 +43,16 @@ Managed via `pyproject.toml` and `uv.lock`:
 - `scipy`
 - `plotly`
 - `streamlit`
+- `matplotlib`
+- `pandas`
 
 ## Project structure
 
 ```
 .
-├── app.py                    # Streamlit app
-├── PoissonGamma.ipynb  # Concept notebook
+├── app.py                           # Streamlit app
+├── PoissonGamma.ipynb               # Concept notebook
+├── AB-testing-poissongamma.ipynb    # A/B testing case study
 ├── pyproject.toml
 └── uv.lock
 ```
